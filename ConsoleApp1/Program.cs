@@ -12,6 +12,7 @@ namespace ConsoleApp1
         {
             string S1;
 
+            Console.WriteLine("Enter Text");
             S1 = Console.ReadLine();
 
             Console.WriteLine(S1);
@@ -22,7 +23,7 @@ namespace ConsoleApp1
             string Name = "Bilal";
             bool IsActive = false;
             char C1 = 'A';
-            const int Index= 5;
+            const int Index = 5;
 
             Console.WriteLine(x);
             Console.WriteLine(y);
@@ -50,7 +51,25 @@ namespace ConsoleApp1
             Console.WriteLine("Input Your Date of Birth");
             DateBirth = Console.ReadLine();
 
-            Console.Write("");
+            Console.WriteLine("{0} {1} {2}", FName, LName, DateBirth);
+
+
+            int [] Number = new int[10];
+
+            for (int i = 0; i < Number.Length; i++)
+            {
+                Console.WriteLine("Enter a Value number {0}",i+1);
+                Number[i] = Convert.ToInt32( Console.ReadLine());
+
+
+            }
+
+
+            for (int i = 0; i < Number.Length; i++)
+            {
+
+                Console.WriteLine(Number[i]);
+            }
 
 
 
@@ -59,12 +78,7 @@ namespace ConsoleApp1
 
 
 
-
-
-
-
-
-            Console.ReadKey();
+                Console.ReadKey();
         }
     }
 }
