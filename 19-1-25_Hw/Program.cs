@@ -175,6 +175,7 @@ namespace _19_1_25_Hw
             else
             {
                 Console.WriteLine($"The middle value is: {_num3}");
+                Console.WriteLine($"The middle value is: {_num3}");
             }
 
         }
