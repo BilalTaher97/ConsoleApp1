@@ -12,11 +12,48 @@ namespace _20_1_25_Tasks
 
         public class HotelReservationSystem
         {
-            public int RoomNumber;
-            public string TypeRoom;
-            public double PricePerNight;
-            public bool  IsBooked;
+
+            private int RoomNumber;
+            public int roomnumber
+            {
+
+                set
+                {
+                  RoomNumber = value;
+                }
+
+                get
+                {
+
+                    return RoomNumber;
+                }
+
+            }
+            public string TypeRoom { get; set; }
+            public double PricePerNight { get; set; }
+            public bool IsBooked { get; set; }
+
             public const string HotelName = "Grand Stay Hotel";
+
+
+            public HotelReservationSystem()
+            {
+
+            }
+
+            public HotelReservationSystem(int roomNumber, string typeRoom, double pricePerNight, bool isBooked)
+            {
+                RoomNumber = roomNumber;
+                TypeRoom = typeRoom;
+                PricePerNight = pricePerNight;
+                IsBooked = isBooked;
+            }
+
+
+            ~HotelReservationSystem()
+            {
+
+            }
         }
         static void PrintOddOrEven(int Num1)
         {
@@ -180,7 +217,7 @@ namespace _20_1_25_Tasks
             HotelReservationSystem Obj = new HotelReservationSystem();
 
             Console.WriteLine("Enter Number of Room ?");
-            Obj.RoomNumber = Convert.ToInt32(Console.ReadLine());
+            Obj.roomnumber = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter Type Room ?");
             Obj.TypeRoom = Console.ReadLine();
@@ -201,7 +238,7 @@ namespace _20_1_25_Tasks
             Console.WriteLine("\n\n");
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine($"Hotel Name {HotelReservationSystem.HotelName}");
-            Console.WriteLine($"Room Number is {Obj.RoomNumber}");
+            Console.WriteLine($"Room Number is {Obj.roomnumber}");
             Console.WriteLine($"Room Type is {Obj.TypeRoom}");
             Console.WriteLine($"Price Per Night {Obj.PricePerNight}");
             Console.WriteLine($"Is Booked {Obj.IsBooked}");
