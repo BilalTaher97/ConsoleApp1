@@ -19,7 +19,7 @@ namespace _20_1_25_Tasks
 
                 set
                 {
-                  RoomNumber = value;
+                    RoomNumber = value;
                 }
 
                 get
@@ -55,6 +55,7 @@ namespace _20_1_25_Tasks
 
             }
         }
+
         static void PrintOddOrEven(int Num1)
         {
             Num1 = Convert.ToInt32(Console.ReadLine());
@@ -71,7 +72,7 @@ namespace _20_1_25_Tasks
 
         static int Print2nd()
         {
-            int [] Arr = { 4, -3, 7, 2, 0 };
+            int[] Arr = { 4, -3, 7, 2, 0 };
 
             Array.Sort(Arr);
 
@@ -82,7 +83,7 @@ namespace _20_1_25_Tasks
         {
             int Sum = 1;
 
-            for (int i = n -1; i > 0; i--)
+            for (int i = n - 1; i > 0; i--)
             {
                 Sum += Sum * i;
             }
@@ -95,9 +96,9 @@ namespace _20_1_25_Tasks
 
             int halfNumber = n / 2;
 
-            for(int i = 2; i <= halfNumber; i++)
+            for (int i = 2; i <= halfNumber; i++)
             {
-                if(n % i == 0)
+                if (n % i == 0)
                 {
                     return false;
                 }
@@ -107,13 +108,13 @@ namespace _20_1_25_Tasks
             return true;
         }
 
-        static void PrintPrimeNumber(int From , int To)
+        static void PrintPrimeNumber(int From, int To)
         {
-            
 
-            for(int x = From; x <= To; x++)
+
+            for (int x = From; x <= To; x++)
             {
-                if(IsPrime(x))
+                if (IsPrime(x))
                 {
                     Console.Write(x + " ");
                 }
@@ -131,9 +132,9 @@ namespace _20_1_25_Tasks
             int Max = Arr[0];
 
 
-            for(int i = 1; i < Arr.Length; i++)
+            for (int i = 1; i < Arr.Length; i++)
             {
-                if(Max <  Arr[i])
+                if (Max < Arr[i])
                 {
                     Max = Arr[i];
                 }
@@ -145,15 +146,33 @@ namespace _20_1_25_Tasks
         static void PrintNumbers(int n)
         {
 
-            for (int i = 1; i <= n; i++)
+
+            for (int j = 1; j < n; j++)
             {
-                for(int x = 1; x <= i; x++)
+                for (int i = 1; i <= n - j; i++)
                 {
-                    Console.Write(x + " ");
+                    Console.Write("  ");
+                    
+                }
+
+                for (int x = 1; x <= j; x++)
+                {
+                    if(x<10)
+                    {
+                        Console.Write(x + " ");
+                    }
+                    else
+                    {
+                        Console.Write(x + "");
+                    }
+                   
                 }
 
                 Console.WriteLine();
             }
+
+
+
 
         }
 
@@ -163,11 +182,11 @@ namespace _20_1_25_Tasks
             {
                 for (int x = 1; x <= i; x++)
                 {
-                    if(i % 2 != 0)
+                    if (i % 2 != 0)
                     {
                         Console.Write("*");
                     }
-                   
+
                 }
 
                 Console.WriteLine();
@@ -180,9 +199,9 @@ namespace _20_1_25_Tasks
             int Even = 0;
             int Odd = 0;
 
-            for(int i = 0; i < Arr.Length; i++)
+            for (int i = 0; i < Arr.Length; i++)
             {
-                if (Arr[i] %  2 == 0)
+                if (Arr[i] % 2 == 0)
                 {
                     Even += Arr[i];
                 }
@@ -198,12 +217,12 @@ namespace _20_1_25_Tasks
             Console.Write($"sum of odd Numbers: {Odd}");
         }
 
-        static void Compares(int[] Arr1,int[] Arr2)
+        static void Compares(int[] Arr1, int[] Arr2)
         {
-            if(Arr1.Length != Arr2.Length)
+            if (Arr1.Length != Arr2.Length)
                 return;
 
-            for(int i = 0;  i < Arr1.Length;i++)
+            for (int i = 0; i < Arr1.Length; i++)
             {
                 if (Arr1[i] == Arr2[i])
                 {
@@ -245,9 +264,9 @@ namespace _20_1_25_Tasks
             Console.WriteLine("-------------------------------------------------");
         }
 
-
         static void Main(string[] args)
         {
+
 
             //1
             PrintOddOrEven(12);
@@ -259,7 +278,7 @@ namespace _20_1_25_Tasks
             Console.WriteLine(factorial(6));
 
             //4
-            PrintPrimeNumber(10,30);
+            PrintPrimeNumber(10, 30);
 
             Console.WriteLine("\n\n");
             //5
@@ -280,10 +299,10 @@ namespace _20_1_25_Tasks
 
             //9
             Console.WriteLine("\n\n");
-            int[] Arr1 = { 1, 2, 3, 4, 5, 6, 7 }; 
-            int [] Arr2 =  { 11, 2, 3, 44, 5, 56, 7 };
+            int[] Arr1 = { 1, 2, 3, 4, 5, 6, 7 };
+            int[] Arr2 = { 11, 2, 3, 44, 5, 56, 7 };
 
-            Compares(Arr1 , Arr2);
+            Compares(Arr1, Arr2);
 
             //10
             HotelReservationSystem hotel1 = new HotelReservationSystem();
